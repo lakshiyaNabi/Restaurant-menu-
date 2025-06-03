@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .container img{
+            width: 1460px;
+            height: 500px;
+            padding: 10px;
+        }
+        .heading{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: brown;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        
+        .top-text {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+      text-align: center;
+      font-size: 50px;
+      font-family:serif;
+    }
+    .bottom-bar {
+  position:relative;       /* Fix it at the bottom of the viewport */
+  bottom: 0;
+  left: 0;
+  width: 100%;           /* Full width */
+  background-color: #222; /* Dark background */
+  color: #fff;           /* White text */
+  display: flex;         /* Arrange spans horizontally */
+  justify-content: space-around; /* Even spacing */
+  align-items: center;
+  padding: 12px 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.bottom-bar span {
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.bottom-bar span:hover {
+  background-color: #fff;
+  color: #222;
+}
+.about-us{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+}
+.gallery-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap; /* makes it responsive */
+      padding: 40px 20px;
+      background-color:burlywood;
+    }
+
+    .gallery-container img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+     .dish-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .main-course{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 50px;
+        color: #8B4513;
+    }
+
+    .dish-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-content {
+      padding: 15px 20px;
+    }
+
+    .dish-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .dish-description {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.4;
+    }
+   .dessert-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #fff5e1; /* light background for dessert section */
+}
+
+.dessert {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  color: #8B4513;
+}
+.location-heading {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 60px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #333;
+}
+
+.location-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 30px 20px;
+  background-color:burlywood;
+  gap: 30px;
+}
+
+.location-info {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  max-width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+.location-map {
+  flex-grow: 1;
+  max-width: 600px;
+}
+.location-section {
+  background-color:burlywood;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-top: 4px solid #333;
+  margin-top: 60px;
+}
+
+.location-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.location-details {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <img src="food1.jpg">
+        <p class="top-text">LUMORA</p>
+    </div>
+</div>
+    <div class="bottom-bar">
+      <span>About us</span>
+      <span>Menu</span>
+      <span>Location</span>
+      <span>Details</span>
+    </div>
+     <div class="about-us">
+    <h1 class="heading">Welcome to The lumora!</h1>
+    <p>
+      At The lumora, we believe that great food brings people together. Founded in 2010, our restaurant was born out of a passion for fresh, locally sourced ingredients and a love for creating unforgettable dining experiences.
+    </p>
+    <p>
+      Our mission is simple: to serve delicious, wholesome meals that celebrate the best flavors of the season. We work closely with local farmers and artisans to bring you dishes that are both creative and comforting, made from ingredients you can trust.
+    </p>
+    <p>
+      Led by Chef Maria Lopez, our culinary team blends traditional recipes with modern twists, crafting a menu that changes with the seasons to highlight nature’s bounty. Whether you’re joining us for a cozy dinner or a lively celebration, our warm and welcoming atmosphere is designed to make you feel right at home.
+    </p>
+    <p>
+      Over the years, we’ve been honored to receive several local awards and to be recognized for our commitment to sustainability and community involvement.
+    </p>
+    <p>
+      Thank you for being part of our story. We look forward to sharing a meal with you soon!
+    </p>
+  </div>
+  <div class="gallery-container">
+    <img src="rest interior design1.jpg" alt="Gallery image 1">
+    <img src="rest interior design2.jpg" alt="Gallery image 2">
+    <img src="rest interior design3.jpg" alt="Gallery image 3">
+    <!-- Add more images as needed -->
+  </div>
+  <center>
+  <h2 class="main-course">Main Course Recipes</h2>
+  </center>
+    <div class="dish-gallery">
+    <div class="dish-card">
+      <img src="dish1.jpeg" alt="Grilled Salmon">
+      <div class="dish-content">
+        <div class="dish-title">Grilled Salmon</div>
+        <div class="dish-description">
+          Fresh Atlantic salmon grilled to perfection with lemon butter sauce and seasonal vegetables.
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dish-card">
+      <img src="dish3.jfif" alt="Chicken Curry">
+      <div class="dish-content">
+        <div class="dish-title">Chicken Curry</div>
+        <div class="dish-description">
+          Spicy and flavorful chicken simmered in a rich curry sauce served with fragrant basmati rice.
+        </div>
+      </div>
+    </div>
+     <div class="dish-card">
+      <img src="dish4.jfif" alt="Chicken Curry">
+      <div class="dish-content">
+        <div class="dish-title">Fish Fry</div>
+        <div class="dish-description">
+         A "fish fry" refers to a social event or meal featuring fried fish, often served with side dishes like coleslaw, french fries, or potato salad.
+      </div>
+    </div>
+    </div>
+     <div class="dish-card">
+      <img src="dish5.jfif" alt="Chicken Curry">
+      <div class="dish-content">
+        <div class="dish-title">Prawn Fry</div>
+        <div class="dish-description">
+          Prawn curry is a dish where prawns are cooked in a flavorful gravy, typically with Indian or Thai spices, and often served with rice or other accompaniments.
+        </div>
+      </div>
+    </div>
+     <div class="dish-card">
+      <img src="dish6.jfif" alt="Chicken Curry">
+      <div class="dish-content">
+        <div class="dish-title">Crab Fry</div>
+        <div class="dish-description">
+          Spicy and flavorful chicken simmered in a rich curry sauce served with fragrant basmati rice.
+        </div>
+      </div>
+    </div>
+     <div class="dish-card">
+      <img src="dish7.jfif" alt="Chicken Curry">
+      <div class="dish-content">
+        <div class="dish-title">Mutton Curry</div>
+        <div class="dish-description">
+          Mutton curry is a dish made from goat meat (or sometimes lamb) cooked with various spices, herbs, and vegetables in a gravy.
+        </div>
+      </div>
+    </div>
+     <div class="dish-card">
+      <img src="dish8.jfif" alt="Chicken Curry">
+      <div class="dish-content">
+        <div class="dish-title">Chicken Tikka</div>
+        <div class="dish-description">
+          Chicken tikka masala is a dish consisting of roasted marinated chicken pieces (chicken tikka) in a spiced sauce (masala). 
+        </div>
+      </div>
+    </div>
+     <div class="dish-card">
+      <img src="dish9.jfif" alt="Chicken Curry">
+      <div class="dish-content">
+        <div class="dish-title">Squid Roast </div>
+        <div class="dish-description">
+          Squid roast, also known as kalamari roast or koonthal roast, is a flavorful and popular dish from Kerala, India. 
+        </div>
+      </div>
+    </div>
+    </div> <!-- closes .dish-gallery -->
+
+<!-- Dessert Section Starts -->
+<center>
+  <h2 class="dessert">Desserts</h2>
+</center>
+
+<div class="dish-gallery">
+  <div class="dish-card">
+    <img src="dessert1.jpeg" alt="Dessert 1">
+    <div class="dish-content">
+      <div class="dish-title">Mango Kulfi</div>
+      <div class="dish-description">
+        Soft, sweet dumplings soaked in rose-flavored sugar syrup.
+      </div>
+    </div>
+  </div>
+
+  <div class="dish-card">
+    <img src="dessert2.jpeg" alt="Dessert 2">
+    <div class="dish-content">
+      <div class="dish-title">Strawerry</div>
+      <div class="dish-description">
+        Rich molten chocolate cake served warm with a gooey center.
+      </div>
+    </div>
+  </div>
+
+  <div class="dish-card">
+    <img src="dessert3.jpeg" alt="Dessert 3">
+    <div class="dish-content">
+      <div class="dish-title">chocolate</div>
+      <div class="dish-description">
+        Classic creamy cheesecake with a buttery crust and berry topping.
+      </div>
+    </div>
+  </div>
+    <div class="dish-card">
+    <img src="dessert4.jpeg" alt="Dessert 3">
+    <div class="dish-content">
+      <div class="dish-title">Vanilla</div>
+      <div class="dish-description">
+        Classic creamy cheesecake with a buttery crust and berry topping.
+      </div>
+    </div>
+  </div>
+   <div class="dish-card">
+    <img src="dessert5.jpeg" alt="Dessert 3">
+    <div class="dish-content">
+      <div class="dish-title">Choco Larva</div>
+      <div class="dish-description">
+        Classic creamy cheesecake with a buttery crust and berry topping.
+      </div>
+    </div>
+  </div>
+ <div class="dish-card">
+    <img src="dessert6.jpeg" alt="Dessert 3">
+    <div class="dish-content">
+      <div class="dish-title">Cheesecake</div>
+      <div class="dish-description">
+        Classic creamy cheesecake with a buttery crust and berry topping.
+      </div>
+    </div>
+  </div>
+ <div class="dish-card">
+    <img src="dessert7.jpeg" alt="Dessert 3">
+    <div class="dish-content">
+      <div class="dish-title">Black Forest</div>
+      <div class="dish-description">
+        Classic creamy cheesecake with a buttery crust and berry topping.
+      </div>
+    </div>
+  </div>
+ <div class="dish-card">
+    <img src="dessert8.jpeg" alt="Dessert 3">
+    <div class="dish-content">
+      <div class="dish-title">Rasmalai</div>
+      <div class="dish-description">
+        Classic creamy cheesecake with a buttery crust and berry topping.
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="location-section">
+  <h2 class="location-title"></h2>
+  <div class="location-details">
+    <p><strong>The Lumora Restaurant</strong></p>
+    <p>123 Food Street, Flavor Town</p>
+    <p>Chennai, Tamil Nadu 600001</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Email: contact@lumora.com</p>
+  </div>
+
+  <div class="social-icons">
+    <a href="#"><img src="youtube.jpg" alt="YouTube"></a>
+    <a href="#"><img src="twitter.jpg" alt="Twitter"></a>
+    <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+  </div>
+</div>
+ 
+  </div>
+</div>
+
+
+  </div>
+
+</body>
